@@ -1,16 +1,33 @@
-# Enterprise Data Governance and Zero Trust Reference Architecture
+# Enterprise Data Governance & Zero Trust Reference Architecture
 
-Target-state Microsoft 365 data governance and security architecture for a fictional mid-sized financial institution.
+Organizations create and manage large amounts of information every day. Some information can be shared publicly, while other information must be protected because it contains customer data, financial records, employee information, legal documentation, or confidential business assets.
 
-This repository demonstrates how business ownership, data classification, risk decisions, identity and device trust, Microsoft Purview controls, monitoring, investigation, and response can operate as one traceable governance system.
+This project demonstrates how organizations can classify, protect, retain, monitor, and investigate information throughout its lifecycle using Zero Trust governance principles.
+
+Designed for a fictional mid-sized financial institution, the architecture combines identity, access management, data protection, retention, monitoring, and investigation capabilities into one governance framework. Its purpose is to reduce business risk, support compliance requirements, and improve operational security. Microsoft Purview is a major control platform within the design, but the architecture begins with business ownership, risk, and accountable decision-making rather than technology alone.
 
 > **Portfolio status:** Phase 1 architecture design. This is not a production deployment, regulatory certification, legal opinion, or claim of implemented control effectiveness.
 
 ## Executive Summary
 
-Financial institutions must protect customer, employee, financial, operational, and investigation data without preventing legitimate business activity. That requires more than enabling individual Microsoft 365 features. Governance decisions must be translated into layered controls, accountable operating procedures, evidence, exceptions, and residual-risk decisions.
+Financial institutions must protect customer, employee, financial, operational, and investigation data without preventing legitimate business activity. That requires more than enabling individual Microsoft 365 features. Business requirements must be translated into clear ownership, layered controls, operating procedures, evidence, exceptions, and residual-risk decisions.
 
-This reference architecture begins with a four-level data classification taxonomy and traces material risks into preventive, detective, corrective, recovery, and governance controls. It connects Microsoft Entra ID, Conditional Access, MFA, Privileged Identity Management, Microsoft Intune, Microsoft Purview, Microsoft Defender, eDiscovery, and operational response processes under Zero Trust and defense-in-depth principles.
+This reference architecture follows information from classification through protection, access, retention, monitoring, and investigation. It connects Microsoft Entra ID, Conditional Access, MFA, Privileged Identity Management, Microsoft Intune, Microsoft Purview, Microsoft Defender, eDiscovery, and operational response processes under Zero Trust and defense-in-depth principles.
+
+## Information Governance Lifecycle
+
+The project tells one business story across six connected stages:
+
+| Lifecycle stage | Business purpose | Representative controls and capabilities |
+|---|---|---|
+| **Classify Information** | Identify sensitivity, ownership, permitted use, and potential business impact. | Public, Internal, Confidential, and Highly Confidential / Restricted classifications |
+| **Protect Information** | Apply safeguards that match the information's sensitivity and exposure risk. | Sensitivity labels, DLP, encryption, and sharing controls |
+| **Control Access** | Verify who or what is requesting access and limit authority to an approved business need. | Microsoft Entra ID, MFA, Conditional Access, RBAC, PIM, and least privilege |
+| **Retain Information** | Keep records for an approved period, preserve information when required, and support defensible disposal. | Retention policies, retention labels, records management, and legal hold |
+| **Monitor Activity** | Maintain visibility into access, sharing, policy matches, risky behavior, and security events. | Audit logs, Insider Risk Management, Microsoft Defender XDR, and alerting |
+| **Investigate Incidents** | Review events through an authorized, documented, and evidence-based process. | eDiscovery, audit trails, case review, and legal or compliance escalation |
+
+The taxonomy uses four traceable control tiers. **Highly Confidential / Restricted** is the highest tier (`DATA-04`), combining both terms to keep classification choices understandable while preserving strict handling requirements.
 
 ## Business Problem
 
@@ -24,6 +41,16 @@ Common data-governance failures include:
 - Investigations lack clear authority, preservation, privacy safeguards, and role separation.
 - Exceptions remain open without expiration, monitoring, or accountable risk acceptance.
 - Product configuration is mistaken for compliance or operating effectiveness.
+
+## Why This Matters
+
+Without strong data governance:
+
+- Sensitive data may be exposed or shared with the wrong audience.
+- Business records may be deleted too early or retained longer than necessary.
+- Compliance, legal, privacy, and contractual requirements may be missed.
+- Investigations may be delayed by incomplete logs, unclear ownership, or weak evidence handling.
+- Unmanaged access, exceptions, and data movement increase business risk.
 
 ## Architecture Objectives
 
@@ -112,6 +139,18 @@ DATA-04 Highly Confidential customer records
 | Monitoring | Microsoft Purview Audit, Activity Explorer, Insider Risk Management, Microsoft Defender |
 | Investigation | Security triage, authorized case management, Microsoft Purview eDiscovery, evidence preservation |
 | Response | Session revocation, access restriction, endpoint isolation, legal/privacy escalation, recovery and tuning |
+
+## Architecture Outcome
+
+By combining Microsoft Purview, Microsoft Entra ID, Microsoft Defender, audit logging, and Zero Trust controls, this architecture is designed to help organizations:
+
+- Reduce the risk of sensitive information being exposed or misused.
+- Improve readiness for compliance, legal, privacy, and records-management obligations.
+- Strengthen investigation capability through traceable decisions and preserved evidence.
+- Enforce least privilege across users, administrators, applications, devices, and investigators.
+- Improve visibility across sensitive information, access activity, policy events, and exceptions.
+
+These are target-state design outcomes. Their effectiveness would require implementation, testing, monitoring, and evidence in a supported Microsoft 365 environment.
 
 ## Repository Structure
 

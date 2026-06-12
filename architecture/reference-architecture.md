@@ -1,4 +1,8 @@
-# Enterprise Data Governance and Zero Trust Reference Architecture
+# Enterprise Data Governance & Zero Trust Reference Architecture
+
+This target-state design shows how business governance decisions flow into identity, device, data protection, monitoring, investigation, and response controls. It follows the information lifecycle from classification and access decisions through retention, detection, evidence preservation, and recovery.
+
+Microsoft technologies enable the controls, but business owners, legal, privacy, records, risk, and security stakeholders remain accountable for requirements, approvals, exceptions, and outcomes.
 
 ```mermaid
 flowchart TB

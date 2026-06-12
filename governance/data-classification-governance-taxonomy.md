@@ -2,9 +2,9 @@
 
 ## Document Purpose
 
-This document defines a target-state data classification and handling model for a fictional mid-sized financial institution using Microsoft 365 and Microsoft Purview.
+This document defines a target-state data classification and handling model for a fictional mid-sized financial institution. It gives business owners and employees a consistent way to decide what information means to the organization, who should use it, and how strongly it should be protected.
 
-The taxonomy establishes the business language that later architecture artifacts will use to connect data risk with access controls, sensitivity labels, Data Loss Prevention (DLP), retention, monitoring, investigation, and incident response.
+The taxonomy establishes the business language used throughout the architecture to connect information risk with access controls, sensitivity labels, Data Loss Prevention (DLP), retention, monitoring, investigation, and incident response. Microsoft 365 and Microsoft Purview provide technical capabilities that support these approved governance decisions.
 
 > **Architecture status:** Target-state reference design. This document does not represent a completed production deployment, regulatory certification, or legal determination.
 
