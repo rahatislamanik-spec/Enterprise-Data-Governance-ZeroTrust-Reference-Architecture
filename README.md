@@ -1,4 +1,5 @@
 # Enterprise Data Governance & Zero Trust Reference Architecture
+> **Status:** Active Development
 
 Organizations create and manage large amounts of information every day. Some information can be shared publicly, while other information must be protected because it contains customer data, financial records, employee information, legal documentation, or confidential business assets.
 
