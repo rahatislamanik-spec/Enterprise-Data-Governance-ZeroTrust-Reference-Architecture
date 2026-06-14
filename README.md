@@ -7,7 +7,7 @@ This project demonstrates how organizations can classify, protect, retain, monit
 
 Designed for a fictional mid-sized financial institution, the architecture combines identity, access management, data protection, retention, monitoring, and investigation capabilities into one governance framework. Its purpose is to reduce business risk, support compliance requirements, and improve operational security. Microsoft Purview is a major control platform within the design, but the architecture begins with business ownership, risk, and accountable decision-making rather than technology alone.
 
-> **Portfolio status:** Phase 1 architecture design. This is not a production deployment, regulatory certification, legal opinion, or claim of implemented control effectiveness.
+> **Portfolio status:** Phase 1 governance architecture and Phase 2 Microsoft 365 evidence package. This is not a production deployment, regulatory certification, legal opinion, or claim of implemented control effectiveness.
 
 ## Executive Summary
 
@@ -87,6 +87,16 @@ Without strong data governance:
 | [Reference Architecture](architecture/reference-architecture.md) | Presents the layered governance, identity, device, data, monitoring, investigation, and response architecture in Mermaid. |
 | [Data Exfiltration Investigation Scenario](operations/data-exfiltration-investigation-scenario.md) | Applies the design to a tabletop scenario involving a departing financial advisor and customer records. |
 
+## Phase 2 - Microsoft 365 Evidence Package
+
+Phase 2 adds sanitized implementation-style evidence for selected Microsoft 365, Microsoft Entra ID, Microsoft Purview, Conditional Access, DLP, monitoring, audit, and eDiscovery preservation-location review. The evidence supports the fictional Sarah Johnson departing wealth advisor scenario and demonstrates how parts of the Phase 1 design can be represented through reviewable Microsoft 365 artifacts.
+
+The focused gallery contains eight recruiter-facing screenshots with supporting configuration evidence and a sanitized preservation-location export. Each artifact is labeled by evidence state so that policy design, report-only configuration, observed portal activity, and unverified outcomes are not confused.
+
+**[Review the Phase 2 Microsoft 365 Evidence Package](evidence/README.md)**
+
+![Microsoft Purview Activity Explorer evidence](evidence/screenshots/monitoring/07-activity-explorer-label-events.png)
+
 ## Reference Architecture
 
 The [Mermaid reference architecture](architecture/reference-architecture.md) is organized into seven layers:
@@ -165,7 +175,15 @@ Enterprise-Data-Governance-ZeroTrust-Reference-Architecture/
 |   `-- risk-control-matrix.md
 |-- operations/
 |   `-- data-exfiltration-investigation-scenario.md
-|-- evidence/                  # Planned for approved Phase 2 evidence
+|-- evidence/
+|   |-- README.md
+|   |-- reports/
+|   |   `-- hold-locations-sanitized.csv
+|   `-- screenshots/
+|       |-- identity-access/
+|       |-- data-classification/
+|       |-- data-protection/
+|       `-- monitoring/
 `-- automation/                # Planned for reviewed Phase 3 automation
 ```
 
@@ -186,7 +204,7 @@ The reserved Phase 2 and Phase 3 boundaries allow implementation evidence and au
 - No production deployment or control effectiveness is claimed.
 - No compliance certification, regulatory conclusion, or legal interpretation is provided.
 - Retention periods and regulatory mappings are illustrative until approved by authorized stakeholders.
-- The Phase 1 architecture contains no screenshots, tenant configuration, generated reports, or execution evidence.
+- Phase 2 contains selected demonstration-environment screenshots and a sanitized preservation-location export; it does not establish production operation or control effectiveness.
 - The tabletop scenario contains no real incident, affected person, fabricated alert, invented outcome, or performance metric.
 - Microsoft product coverage does not replace organizational policy, training, ownership, investigation authority, or risk acceptance.
 - Residual-risk ratings require future validation using implementation evidence, tests, telemetry, exceptions, and incident trends.
@@ -206,13 +224,11 @@ These are future reporting requirements, not achieved outcomes:
 
 ## Future Roadmap
 
-### Phase 2 - Microsoft 365 E5 Implementation Evidence
+### Phase 2 - Microsoft 365 Evidence Package
 
-- Map only observed tenant configuration to the Phase 1 controls.
-- Add sanitized screenshots and evidence descriptions.
-- Distinguish configured, simulated, enforced, observed, and unverified states.
-- Preserve policy mode, scope, prerequisites, limitations, and evidence dates.
-- Avoid treating screenshots as proof of effectiveness or compliance.
+- Completed as a focused, sanitized evidence package for the fictional Sarah Johnson scenario.
+- Separates policy design, report-only configuration, observed portal events, and unverified outcomes.
+- Preserves implementation context without treating screenshots as proof of effectiveness or compliance.
 
 ### Phase 3 - PowerShell Governance Automation
 

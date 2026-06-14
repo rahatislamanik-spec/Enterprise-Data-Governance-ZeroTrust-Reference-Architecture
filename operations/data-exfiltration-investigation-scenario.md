@@ -15,6 +15,9 @@ Source artifacts:
 - [Data Classification and Governance Taxonomy](../governance/data-classification-governance-taxonomy.md)
 - [Risk Control Matrix](../governance/risk-control-matrix.md)
 - [Reference Architecture](../architecture/reference-architecture.md)
+- [Phase 2 Microsoft 365 Evidence Package](../evidence/README.md)
+
+Phase 2 provides selected demonstration-environment artifacts that illustrate parts of this workflow. It does not convert the tabletop scenario into a confirmed incident record. In particular, no real DLP alert, Insider Risk case, malicious intent, external-sharing outcome, or production control effectiveness is claimed.
 
 ## Scenario Context
 
